@@ -1,37 +1,17 @@
-import './App.css'
-import Dashboard from './Components/Dashboard/Dashboard'
-import Login from './Components/Login/Login'
-import Register from './Components/Register/Register'
-
-import {
-    createBrowserRouter,
-    RouterProvider
-} from 'react-router-dom'
-
-const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <div><Login/></div>
-    },
-    {
-        path: '/register',
-        element: <div><Register/></div>
-    },
-    {
-        path: '/dashboard',
-        element: <div><Dashboard/></div>
-    } 
-    
-])
+import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './AppRouter';
 
 function App() {
+    const [userRole, setUserRole] = useState(null); // Default role
 
-  return (
-    <div>
-        <RouterProvider router={router}/>
-    </div>
-  )
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <AppRouter userRole={userRole} setUserRole={setUserRole} />
+            </div>
+        </BrowserRouter>
+    );
 }
 
-
-export default App
+export default App;
