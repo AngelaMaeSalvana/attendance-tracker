@@ -10,7 +10,7 @@ const port = process.env.PORT || 5002;
 
 // Middleware
 app.use(cors());
-app.use(express.json());
+app.use(express.json()); // For parsing application/json
 
 // MySQL Connection
 const connection = mysql.createConnection({
@@ -18,7 +18,7 @@ const connection = mysql.createConnection({
     user: 'root',
     password: '',
     database: 'attendance',
-    port: 3006
+    port: 3006,
 });
 
 connection.connect((err) => {
@@ -31,15 +31,16 @@ connection.connect((err) => {
 
 // Login Route
 app.post('/api/login', (req, res) => {
+    console.log(req.body); // Log incoming request body
     const { userId, password } = req.body;
 
-    connection.query('SELECT * FROM users WHERE user_id = ?', [userId], (err, results) => {
+    connection.query('SELECT * FROM tbl_users WHERE id = ?', [userId], (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
 
         if (results.length > 0) {
             const user = results[0];
             if (password === user.password) { // Direct comparison for testing
-                const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET,{
+                const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, {
                     expiresIn: '1h',
                 });
                 return res.json({ message: 'Login successful', token, role: user.role });

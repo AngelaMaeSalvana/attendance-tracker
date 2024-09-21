@@ -1,0 +1,158 @@
+.registerPage {
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 7px 50px rgb(214, 223, 213);
+}
+.registerPage .container {
+  height: 75vh;
+  width: 60%;
+  margin: auto;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: hsl(0, 0%, 91%);
+}
+.registerPage .container .imgDiv {
+  position: relative;
+  display: flex;
+  flex-basis: 50%;
+  width: 70%;
+  height: 100%;
+  padding: 0 1.5rem;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.registerPage .container .imgDiv img,
+.registerPage .container .imgDiv .footerDiv {
+  position: absolute;
+}
+.registerPage .container .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.registerPage .container .imgDiv .logoImg {
+  position: relative;
+  top: -100px;
+}
+.registerPage .container .imgDiv .logoImg img {
+  height: 70px;
+  width: 70px;
+  justify-self: center;
+}
+.registerPage .container .imgDiv .textDiv {
+  position: relative;
+}
+.registerPage .container .imgDiv .textDiv .title {
+  color: var(--whiteColor);
+  font-size: 35px;
+  font-weight: 800;
+  text-shadow: 2px 2px 3px rgba(37, 37, 37, 0.795);
+}
+.registerPage .container .imgDiv .textDiv p {
+  color: var(--whiteColor);
+  padding: 1rem;
+  text-shadow: 2px 2px 10px rgba(37, 37, 37, 0.795);
+}
+.registerPage .container .imgDiv .footerDiv {
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  padding: 0 0.5rem;
+  height: 60px;
+  background: rgba(29, 29, 29, 0.48);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.registerPage .container .imgDiv .footerDiv .text {
+  color: var(--whiteColor);
+}
+.registerPage .container .imgDiv .footerDiv .btn {
+  background: var(--whiteColor);
+  color: var(--primaryColor);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-radius: 6px;
+}
+.registerPage .container .imgDiv .footerDiv .btn:hover {
+  background: var(--primaryColor);
+  color: var(--blackColor);
+}
+.registerPage .container .formDiv {
+  flex-basis: 50%;
+  margin: auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  transform: translateY(-1rem);
+}
+.registerPage .container .formDiv .headerDiv {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.registerPage .container .formDiv .headerDiv h1 {
+  font-size: 2rem;
+  color: var(--blackColor);
+  font-weight: 600;
+}
+.registerPage .container .formDiv form {
+  gap: 1rem;
+}
+.registerPage .container .formDiv form .inputDiv .icon {
+  color: var(--greyColor);
+}
+.registerPage .container .formDiv form .inputDiv input {
+  background: none;
+  outline: none;
+  border: none;
+  width: 200px;
+}
+.registerPage .container .formDiv form .inputDiv label {
+  color: var(--blackColor);
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0.5rem 0;
+  display: block;
+}
+.registerPage .container .formDiv form .inputDiv .input {
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: var(--whiteColor);
+  border-radius: 10px;
+}
+.registerPage .container .formDiv form .btn {
+  padding: 0.8rem;
+  background-color: var(--primaryColor);
+  border-radius: 10px;
+  color: var(--whiteColor);
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  gap: 0.5rem;
+  transition: 0.3s ease;
+}
+.registerPage .container .formDiv form .btn .icon {
+  font-size: 25px;
+  transition: 0.3s;
+}
+.registerPage .container .formDiv form .btn:hover {
+  background-color: var(--hoverColor);
+}/*# sourceMappingURL=Register.css.map */
